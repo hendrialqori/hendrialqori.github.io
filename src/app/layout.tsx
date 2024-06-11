@@ -1,7 +1,7 @@
-import { Inter } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
+const open_Sans = Open_Sans({
   subsets: ["latin"],
 });
 
@@ -12,7 +12,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={open_Sans.className}>{children}</body>
     </html>
   );
 }

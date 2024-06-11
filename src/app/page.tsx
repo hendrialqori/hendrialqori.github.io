@@ -1,6 +1,9 @@
+import Image from "next/image";
 import Layout from "@/components/Layout";
 import { Metadata } from "next";
-import Image from "next/image";
+import workExperiences from "@/constants/workExperiences";
+import Experience from "@/components/Experience";
+import educations from "@/constants/educations";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -10,7 +13,55 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <Layout>
-      <main>Home page</main>
+      <main className="text-white text-[.85rem] py-10">
+        <header className="flex items-center justify-between">
+          <h1 className="text-2xl font-bold">About Me</h1>
+          <div>
+
+          </div>
+        </header>
+        <section className="mt-3" aria-label="introduce">
+          <h2 className="text-[1.2em] font-bold">Introducing</h2>
+          <div className="flex relative">
+            <p className="text-[1em] text-gray-300/90">
+              Hey everyone! My name is <b>Hendri Alqori</b>, Indonesian Front-End Engineer based in
+              Landak, West Borneo
+            </p>
+            <Image
+              src="/enggang.png"
+              alt="enggang-bird"
+              className="absolute w-8 right-12 bottom-5"
+              width={100}
+              height={100}
+            />
+          </div>
+        </section>
+        <section className="mt-3" aria-label="background">
+          <h2 className="text-[1.2em] font-bold">Background</h2>
+          <div>
+            <p className="mb-5 text-[1em] text-gray-300/90">
+              Previously, I was a barista and assistant store manager at a coffee shop in my area for as long as 2 years.
+              In the middle of 2021, I decided to quit my job and focus on the web development field.
+            </p>
+          </div>
+        </section>
+        <section className="mt-3" aria-label="Education">
+          <h2 className="text-[1.2em] font-bold">Education</h2>
+          <div className="space-y-4 mt-2">
+            {educations.map((education, i) => (
+              <Experience key={i} {...education} />
+            ))}
+          </div>
+        </section>
+        <section className="mt-3" aria-label="Work Experiences">
+          <h2 className="text-[1.2em] font-bold">Work Experience</h2>
+          <div className="space-y-4 mt-2">
+            {workExperiences.map((experience, i) => (
+              <Experience key={i} {...experience} />
+            ))}
+          </div>
+        </section>
+      </main>
     </Layout>
   );
 }

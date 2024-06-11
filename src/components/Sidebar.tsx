@@ -3,13 +3,13 @@ import Badge from "./Badge"
 
 export default function Sidebar() {
     return (
-        <aside className="w-3/12 sticky top-0 rounded-lg bg-[#1b1e1e] overflow-hidden">
+        <aside className="w-3/12 sticky top-10 rounded-lg bg-[#202021] overflow-hidden h-max">
             <Image
                 src="/code.jpg"
                 alt="background"
                 width="400"
                 height="10"
-                className="h-24 object-cover"
+                className="h-20 object-cover"
             />
             <figure className="relative py-10 text-white">
                 <Image
@@ -19,14 +19,14 @@ export default function Sidebar() {
                     height="10"
                     className="w-16 rounded-full absolute -top-10 -translate-x-1/2 left-1/2"
                 />
-                <figcaption className="text-center space-y-[2px]">
+                <figcaption className="text-center space-y-[1px]">
                     <h1 className="font-medium">Hendri Alqori</h1>
                     <p className="text-[.85rem] text-gray-400">Frontend Developer</p>
-                    <p className="text-[.76rem] leading-5 px-[.5rem]">
-                        &quot;If you can&apos;t endure the fatigue of studying,
-                        then you must be able to endure the pain of ignorance&quot;
+                    <p className="text-[.76rem] leading-4 px-[.5rem] pt-3">
+                        A creative developer known for my critical thinking and
+                        logical approach, interested in web dan mobile development
+                        expecially javascript environment.
                     </p>
-                    <p className="text-[.76rem] text-right -translate-x-5 pt-2 text-gray-300">- Imam Syafi&apos;i, RA.</p>
                 </figcaption>
                 <div className="border-gray-600 px-3 flex gap-1 justify-center flex-wrap mt-4">
                     <Badge textColor="black" backgroundColor="#F7DF1E">
